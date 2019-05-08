@@ -35,6 +35,9 @@ wiringpi.pwmSetRange(2000)
 
 while True:
     x_ball = fb.get_x_location()
+    if x_ball is None:
+        print('No ball in frame')
+        continue
     time_this_loop = time.time()
     error = x_goal - x_ball
     integral += (time_this_loop - time_last_loop) * error
