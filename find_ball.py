@@ -36,6 +36,7 @@ class FindBall():
                                 cv2.CHAIN_APPROX_SIMPLE)
         cnts = imutils.grab_contours(cnts)
         center = None
+        x = None
         # only proceed if at least one contour was found
         if len(cnts) > 0:
             # find the largest contour in the mask, then use
