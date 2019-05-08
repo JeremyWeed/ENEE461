@@ -3,6 +3,7 @@ import time
 
 import wiringpi
 from find_ball import FindBall
+from csv_writer import CSVWriter
 
 x_min = 20
 x_max = 30
@@ -19,6 +20,7 @@ time_last_loop = time.time()
 last_error = 0
 
 fb = FindBall(0)
+csvw = CSVWriter(data.csv)
 
 # use 'GPIO naming'
 wiringpi.wiringPiSetupGpio()
